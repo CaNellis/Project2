@@ -1,5 +1,5 @@
 //line chart ---------------------------------------------
-// reference week 15, day 1, activity 8
+// reference:  week 15, day 1, activity 8
 // Create the Traces
 var trace1 = {
   x: data.Year,
@@ -123,7 +123,7 @@ Plotly.newPlot("line", data, layout);
 
 // bar chart -------------------------------------------
 // reference: https://plot.ly/javascript/bar-charts/
-// also look into Week 15, Day 1, Activity 5
+// class bar chart: Week 15, Day 1, Activity 5
 function init2() {
   var barData = [{x: data2.Cause, y: data2.Rates2016, type: 'bar'}];
   var layout = {height: 400, width: 500};
@@ -146,14 +146,12 @@ function getData2(dataset2) {
   updatePlotly(data);
 }
 init2();
-
 // ------------------------------------------------------
 
 
 // pie chart --------------------------------------------
 // reference: https://plot.ly/javascript/pie-charts
-// dropdown = activity 15:2:2
-// define initialize plot function
+// dropdown reference: activity 15:2:2 
 function init() {
   var data = [{
     values: data4.Percents2016,
