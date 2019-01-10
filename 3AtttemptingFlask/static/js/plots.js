@@ -54,28 +54,42 @@ buildPlot();
 // bar chart -------------------------------------------
 // reference: https://plot.ly/javascript/bar-charts/
 // also look into Week 15, Day 1, Activity 5
-// var barData = [
-//   {
-//     x: data2.Cause,
-//     y: data2.Rate,
-//     type: 'bar'
-//   }
-// ];
-// Plotly.newPlot('bar', barData);
+var url = "/bar";
+function buildPlot() {
+  d3.json(url).then(function(response) {
+    console.log(response); 
+    var barData = [
+      {
+        x: data2.Cause,
+        y: data2.Rate,
+        type: 'bar'
+      }
+    ];
+   Plotly.newPlot('bar', barData);
+  });
+}
+buildPlot();
 // ------------------------------------------------------
  
 // pie chart --------------------------------------------
 // reference: https://plot.ly/javascript/pie-charts/ 
 // make interactive with dropdown events: look at week 15, day 2, activity 2
-// var data = [{
-//   values: data4.Percents2016,
-//   labels: data4.Cause2016,
-//   type: 'pie'
-// }];
-// var layout = {
-//   height: 400,
-//   width: 500,
-//   title: "U.S. Leading Casues of Death in 2016"
-// };
-// Plotly.newPlot('pie', data, layout);
-// ------------------------------------------------------
+var url = "/pie";
+function buildPlot() {
+  d3.json(url).then(function(response) {
+    console.log(response); 
+    var pieData = [{
+      values: data4.Percents2016,
+      labels: data4.Cause2016,
+      type: 'pie'
+    }];
+    var layout = {
+      height: 400,
+      width: 500,
+      title: "U.S. Leading Casues of Death in 2016"
+    };
+    Plotly.newPlot('pie', pieData, layout);
+  });
+}
+buildPlot();
+// ---------- --------------------------------------------

@@ -28,31 +28,6 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-# @app.route("/years")
-# def years():
-#     """Return a list of years."""
-#     # Use Pandas to perform the sql query
-#     stmt = db.session.query(lineData).statement
-#     df = pd.read_sql_query(stmt, db.session.bind)
-#     # Return a list of the column names (sample names)
-#     return jsonify(list(df.columns)[2:])
-# @app.route("/<year>")
-# def yearData(year):
-#     """Return the rates for each cause for selected year."""
-#     sel = [
-#         lineData.Alzheimers,
-#         lineData.CLRD, 
-#         lineData.Cancer, 
-#         lineData.Diabetes, 
-#         lineData.Heart, 
-#         lineData.Influenza, 
-#         lineData.Kidney, 
-#         lineData.Stroke, 
-#         lineData.Suicide, 
-#         lineData.Accident
-#     ]
-    # results = db.session.query(*sel).filter(lineData.Year == year).all()
-
 # Query the line data and return the jsonified results
 @app.route("/line")
 def lineData():

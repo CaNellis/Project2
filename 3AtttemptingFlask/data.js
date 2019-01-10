@@ -1,4 +1,4 @@
-var data = {
+var lineData = {
   Year: [
     1999, 
     2000, 
