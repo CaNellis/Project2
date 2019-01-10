@@ -32,8 +32,85 @@ var trace3 = {
     symbol: "cross"
   }
 };
+var trace4 = {
+  x: data.Year,
+  y: data.Diabetes,
+  mode: "markers",
+  type: "scatter",
+  name: "Diabetes",
+  marker: {
+    color: "red",
+    symbol: "cross"
+  }
+};
+var trace5 = {
+  x: data.Year,
+  y: data.Heart,
+  mode: "markers",
+  type: "scatter",
+  name: "Heart Disease",
+  marker: {
+    color: "blue",
+    symbol: "cross"
+  }
+};
+var trace6 = {
+  x: data.Year,
+  y: data.Influenza,
+  mode: "markers",
+  type: "scatter",
+  name: "Influenza",
+  marker: {
+    color: "green",
+    symbol: "cross"
+  }
+};
+var trace7 = {
+  x: data.Year,
+  y: data.Kidney,
+  mode: "markers",
+  type: "scatter",
+  name: "Kidney",
+  marker: {
+    color: "purple",
+    symbol: "cross"
+  }
+};
+var trace8 = {
+  x: data.Year,
+  y: data.Stroke,
+  mode: "markers",
+  type: "scatter",
+  name: "Stroke",
+  marker: {
+    color: "aqua",
+    symbol: "cross"
+  }
+};
+var trace9 = {
+  x: data.Year,
+  y: data.Suicide,
+  mode: "markers",
+  type: "scatter",
+  name: "Suicide",
+  marker: {
+    color: "gold",
+    symbol: "cross"
+  }
+};
+var trace10 = {
+  x: data.Year,
+  y: data.Unintentional,
+  mode: "markers",
+  type: "scatter",
+  name: "Accident",
+  marker: {
+    color: "tomato",
+    symbol: "cross"
+  }
+};
 // Create the data array for the plot
-var data = [trace1, trace2, trace3];
+var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10];
 // Define the plot layout
 var layout = {
   title: "Change in Top 10 Casues of Death Over the Years",
@@ -61,15 +138,35 @@ Plotly.newPlot('bar', barData);
 
 // pie chart --------------------------------------------
 // reference: https://plot.ly/javascript/pie-charts/ 
-var data = [{
-  values: data4.Percents,
-  labels: data4.Cause,
-  type: 'pie'
-}];
-var layout = {
-  height: 400,
-  width: 500,
-  title: "U.S. Leading Casues of Death in 2016"
-};
-Plotly.newPlot('pie', data, layout);
 // ------------------------------------------------------
+// dropdown = activity 15:2:2
+//define initialize plot function
+function init() {
+  var data = [{
+    values: data4.Percents2016,
+    labels: data4.Cause,
+    type: 'pie'
+  }];
+  var layout = {
+    height: 400,
+    width: 500
+  };
+  Plotly.plot('pie', data, layout);
+}
+  //define update plot function
+  function updatePlotly(newdata) {
+    var PIE = document.getElementById("pie");
+    Plotly.restyle(PIE, "values", [newdata]);
+  }
+  // define get data function
+  function getData(dataset) {
+    var data = [];
+    switch (dataset) {
+    case "dataset1": data = data4.Percents2016; break;
+    case "dataset2": data = data4.Percents2008; break;
+    case "dataset3": data = data4.Percents1999; break;
+    default: data = data4.Percents2016; 
+    }
+    updatePlotly(data);
+  }
+init();
