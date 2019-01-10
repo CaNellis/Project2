@@ -113,7 +113,6 @@ var trace10 = {
 var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10];
 // Define the plot layout
 var layout = {
-  title: "Change in Top 10 Casues of Death Over the Years",
   xaxis: { title: "Year" },
   yaxis: { title: "Cause of Death" }
 };
@@ -125,22 +124,36 @@ Plotly.newPlot("line", data, layout);
 // bar chart -------------------------------------------
 // reference: https://plot.ly/javascript/bar-charts/
 // also look into Week 15, Day 1, Activity 5
-var barData = [
-  {
-    x: data2.Cause,
-    y: data2.Rate,
-    type: 'bar'
+function init2() {
+  var barData = [{x: data2.Cause, y: data2.Rates2016, type: 'bar'}];
+  var layout = {height: 400, width: 500};
+  Plotly.plot('bar', barData, layout);
+}
+//define update plot function
+function updatePlotly(newdata) {
+  var BAR = document.getElementById("bar");
+  Plotly.restyle(BAR, "values", [newdata]);
+}
+// define get data function
+function getData2(dataset2) {
+  var data = [];
+  switch (dataset2) {
+  case "dataset4": data = data2.Rates2016; break;
+  case "dataset5": data = data2.Rates2008; break;
+  case "dataset6": data = data2.Rates1999; break;
+  default: data = data2.Rates2016; 
   }
-];
-Plotly.newPlot('bar', barData);
+  updatePlotly(data);
+}
+init2();
+
 // ------------------------------------------------------
- 
+
 
 // pie chart --------------------------------------------
-// reference: https://plot.ly/javascript/pie-charts/ 
-// ------------------------------------------------------
+// reference: https://plot.ly/javascript/pie-charts
 // dropdown = activity 15:2:2
-//define initialize plot function
+// define initialize plot function
 function init() {
   var data = [{
     values: data4.Percents2016,

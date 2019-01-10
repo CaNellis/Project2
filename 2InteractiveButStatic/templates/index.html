@@ -20,6 +20,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="thumbnail">
+          <h3>Change in Top 10 Casues of Death Over the Years</h3>
           <div id="line"></div>     
         </div>
       </div>
@@ -27,13 +28,19 @@
     <div class="row">
       <div class="col-md-6">
         <div class="thumbnail">
+          <h3>Cause of Death Rates for Selected Year</h3>
+          <select id="selDataset2" onchange="getData2(this.value)">
+              <option value="dataset4">2016</option>
+              <option value="dataset5">2008</option>
+              <option value="dataset6">1999</option>
+            </select> 
           <div id="bar"></div>  
         </div>
       </div> 
       <div class="row">
         <div class="col-md-6">
           <div class="thumbnail">
-            <h3>U.S. Leading Causes of Death</h3>
+            <h3>Cause of Death Percentages for Selected Year</h3>
             <select id="selDataset" onchange="getData(this.value)">
               <option value="dataset1">2016</option>
               <option value="dataset2">2008</option>
