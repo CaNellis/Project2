@@ -1,9 +1,12 @@
 # Project2 Description
  
 ## Topic Selection:
-We decided to use a previous dataset from project 1 and visualize it in a more effective and user-friendly way. 
-- Dataset = Age-Adjusted Death Rates for 10 Leading Causes of Death in United States over 17 years [(link to dataset)](https://data.cdc.gov/NCHS/NCHS-Leading-Causes-of-Death-United-States/bi63-dtpu) The dataset provides age-adjusted death rates for the 10 leading causes of death in the United States (by state) from the years 1999-2016.
-- Original Variables:  
+We decided to use a previous dataset from project 1 and visualize it in a more efficient and interactive way. 
+
+## Dataset = Age-Adjusted Death Rates for 10 Leading Causes of Death in United States over 17 years [(link to dataset)](https://data.cdc.gov/NCHS/NCHS-Leading-Causes-of-Death-United-States/bi63-dtpu) 
+The dataset provides age-adjusted death rates for the 10 leading causes of death in the United States (by state) from the years 1999-2016.
+
+## Original Variables:  
 1. Years: 1999-2016
 2. Causes of Death: Top 10 Causes of death classified by the International Classification of Diseases, Tenth Revision (ICD–10) and ranked according to the number of deaths assigned to rankable causes (based on the underlying cause of death)
 3. State: U.S. State
