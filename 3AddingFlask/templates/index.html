@@ -8,6 +8,9 @@
   <title>US Causes of Death</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -16,13 +19,12 @@
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>U.S Top 10 Causes of Death</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <p>Use the interactive charts below trends from the data</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="thumbnail">
-          <h3>Change in Top 10 Causes of Death Over the Years</h3>
           <div id="line"></div> 
         </div>
       </div>
@@ -31,35 +33,51 @@
       <div class="col-md-6">
         <div class="thumbnail">
             <h3>Cause of Death Rates for Selected Year</h3>
-            <select id="selDataset2" onchange="getData2(this.value)">
+            <!-- <select id="selDataset2" onchange="getData2(this.value)">
               <option value="dataset4">2016</option>
               <option value="dataset5">2008</option>
               <option value="dataset6">1999</option>
-            </select> 
+            </select>  -->
           <div id="bar"></div>  
         </div>
       </div> 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="thumbnail">
-              <h3>Cause of Death Percentages for Selected Year</h3>
-              <select id="selDataset" onchange="getData(this.value)">
-                <option value="dataset1">2016</option>
-                <option value="dataset2">2008</option>
-                <option value="dataset3">1999</option>
-              </select>
-            <div id="pie"></div>   
-          </div>
-        </div> 
+      <div class="col-md-6">
+        <div class="thumbnail">
+            <h3>Cause of Death Percentages for Selected Year</h3>
+            <select id="selDataset" onchange="getData(this.value)">
+              <option value="dataset1">1999</option>
+              <option value="dataset2">2000</option>
+              <option value="dataset3">2001</option>
+              <!-- <option value="dataset4">2002</option>
+              <option value="dataset5">2003</option>
+              <option value="dataset6">2004</option>
+              <option value="dataset7">2005</option>
+              <option value="dataset8">2006</option>
+              <option value="dataset9">2007</option>
+              <option value="dataset10">2008</option>
+              <option value="dataset11">2009</option>
+              <option value="dataset12">2010</option>
+              <option value="dataset13">2011</option>
+              <option value="dataset14">2012</option>
+              <option value="dataset15">2013</option>
+              <option value="dataset16">2014</option>
+              <option value="dataset17">2015</option>
+              <option value="dataset18">2016</option> -->
+            </select>
+          <div id="pie"></div>   
+        </div>
+      </div> 
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="stackedBar" class="thumbnail"></div>
       </div>
     </div>
   </div>
-
   <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
-  <!-- <script src="data.js"></script> -->
-  <!-- <script src="{{ url_for('static', filename='js/plots.js') }}"></script> -->
+  <!-- <script src="data.js"></script> --> 
   <script src="../static/js/plots.js"></script>
 </body>
 

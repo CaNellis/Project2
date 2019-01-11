@@ -9,7 +9,7 @@ import numpy as np
 # from sqlalchemy import create_engine
 
 from flask_cors import CORS
-from flask import Flask, jsonify, render_template, url_for
+from flask import Flask, jsonify, render_template
 # from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -17,7 +17,8 @@ CORS(app)
 
 pieData = pd.read_csv("pieData.csv") 
 barData = pd.read_csv("barData.csv")
-USOData = pd.read_csv("USOnly.csv")
+USOData = pd.read_csv("lineData.csv")
+stackedBarData = pd.read_csv("stackedBarData.csv")
 
 # # database setup
 # app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///data.sqlite"
@@ -51,6 +52,11 @@ def bar():
 def pie():
     pieDict = pieData.to_dict(orient="record")
     return jsonify(pieDict)
+
+@app.route("/stackedBar")
+def stackedBar():
+    stackedBarDict = stackedBarData.to_dict(orient="record")
+    return jsonify(stackedBarDict)
 
 if __name__ == "__main__":
     app.run(debug=True)
