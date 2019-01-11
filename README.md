@@ -1,15 +1,17 @@
 # Project2 Description
  
 ## Topic Selection:
-We decided to use a previous dataset from project 1 and visualize it in a more efficient and interactive way. 
-
-## Dataset = Age-Adjusted Death Rates for 10 Leading Causes of Death in United States over 17 years [(link to dataset)](https://data.cdc.gov/NCHS/NCHS-Leading-Causes-of-Death-United-States/bi63-dtpu) 
+We decided to use a previous dataset from project 1 and visualize it in a more effective and user-friendly way. 
+ 
+## Dataset:
+[link to dataset](https://data.cdc.gov/NCHS/NCHS-Leading-Causes-of-Death-United-States/bi63-dtpu)
+<br>Age-Adjusted Death Rates for 10 Leading Causes of Death in United States over 17 years:
 The dataset provides age-adjusted death rates for the 10 leading causes of death in the United States (by state) from the years 1999-2016.
-
-## Original Variables:  
+ 
+## Variable: 
 1. Years: 1999-2016
 2. Causes of Death: Top 10 Causes of death classified by the International Classification of Diseases, Tenth Revision (ICD–10) and ranked according to the number of deaths assigned to rankable causes (based on the underlying cause of death)
-3. State: U.S. State
+3. State: we’re just using the entire U.S.
 4. Number of Deaths: based on resident death certificates filed 
 5. Age-Adjusted Death Rate (per 100,000 people)
  
@@ -19,11 +21,15 @@ In jupyter notbeook, we limited our dataset to: only the U.S. as a whole (remove
 ## Visualization:
 For our final visualization, we created an interactive dashboard using a Python Flask powered RESTful API,  HTML/CSS, JavaScript, and csv data. 
 
-### Line Chart (created with [plotly](https://plot.ly/javascript/)) = 
-- chosen to allow user to more interactively compare causes of death over time, replaces the need for numerous static charts in Project 
-- features: user can select which of the 10 causes to appear on the line graph and user can view specific values upon hover 
+### Line Chart (using plotly) = 
+chosen to allow user to more interactively compare causes of death over time than from static charts in Project 1. the user can select which of the 10 causes to appear on the line graph. The user can view specific values upon hover 
 
-### Stacked Bar Chart (using [highcharts](https://www.highcharts.com/)) =
-- we originally created a pie and bar chart to allow users to see the distribution of percentages for a specific year, with a dropdown option to change years. Thus, they would be more efficient than multiple static pie and bar charts. 
-- However, the stacked bar was ultimately chosen to replace both of them because it allows the user to compare multiple years' distribution of percentages in one glance (aka: it combined what both of the charts were showing).
-- features: user can view specific values upon hover 
+### Stacked Bar Chart (using highlights js) =
+chosen to allow user to visually see change in percentages of causes of death over time (versus single pie chart from project 1). The user can view specific values upon hover 
+
+### Pie Chart (using plotly) = 
+chosen to allow user to see distribution of percentages for a specific year. The user can view different years upon selection. The user can view specific values upon hover 
+
+### Bar Chart (using plotly) =
+...
+  
