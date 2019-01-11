@@ -1,6 +1,9 @@
 //line chart ---------------------------------------------
 // reference week 15, day 1, activity 8
 // -----------------------------------------------------
+
+// console.log("HEY IM RUNNING IN FLASK!")
+
 var url = "/line";
 function buildPlot() {
   d3.json(url).then(function(response) {
