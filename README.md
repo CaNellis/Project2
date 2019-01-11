@@ -5,7 +5,7 @@ We decided to use a previous dataset from project 1 and visualize it in a more e
  
 ## Dataset:
 [link to dataset](https://data.cdc.gov/NCHS/NCHS-Leading-Causes-of-Death-United-States/bi63-dtpu)
-Age-Adjusted Death Rates for 10 Leading Causes of Death in United States over 17 years:
+<br>Age-Adjusted Death Rates for 10 Leading Causes of Death in United States over 17 years:
 The dataset provides age-adjusted death rates for the 10 leading causes of death in the United States (by state) from the years 1999-2016.
  
 ## Variable: 
