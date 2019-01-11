@@ -25,5 +25,5 @@ For our final visualization, we created an interactive dashboard using a Python 
 
 ### Stacked Bar Chart (using highlights js) =
 - we originally created a pie and bar chart to allow users to see the distribution of percentages for a specific year, with a dropdown option to change years. Thus, they would be more efficient than multiple static pie and bar charts. 
-- However, the stacked bar was ultimately chosen to replace them because it allows the user to compare multiple years' distribution of percentages in one glance (aka: it combined what both of the charts were showing).
+- However, the stacked bar was ultimately chosen to replace both of them because it allows the user to compare multiple years' distribution of percentages in one glance (aka: it combined what both of the charts were showing).
 - features: user can view specific values upon hover 
