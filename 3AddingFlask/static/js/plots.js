@@ -1,5 +1,4 @@
-//line chart ---------------------------------------------
-// reference week 15, day 1, activity 8
+//line chart ----reference week 15, day 1, activity 8
 function buildLine() {
   var url = "http://localhost:5000/line";
   // use 'd3.json' to fetch the sample data for the line chart
@@ -113,11 +112,7 @@ function buildLine() {
 }
 buildLine();
 
-
-// bar chart -------------------------------------------
-// reference: https://plot.ly/javascript/bar-charts/
-// also look into Week 15, Day 1, Activity 
-// Activity 16:2:3 - Bar Chart from csv
+// bar chart ------ reference: Activity 16:2:3 - Bar Chart from csv
 function buildBar() {
   var url = "http://localhost:5000/bar";
   d3.json(url).then(function(response) {
@@ -156,11 +151,8 @@ function buildBar() {
   });
 }
 buildBar();
- 
 
-// pie chart --------------------------------------------
-// reference: https://plot.ly/javascript/pie-charts/ 
-// make interactive with dropdown events: look at week 15, day 2, activity 2
+// pie chart --- make interactive with dropdown events: Activity 15:2:2
 function buildPie() {
   var url = "http://localhost:5000/pie";
   d3.json(url).then(function(response) { 
@@ -249,9 +241,8 @@ function buildPie() {
   }); // end url.then
 } // end buildPie
 buildPie();
-// ---------- --------------------------------------------
 
-
+// stacked bar chart ----using highlights js instead of plotly
 function buildStacked() {
   var url = "http://localhost:5000/stackedBar";
   d3.json(url).then(function(response) {
@@ -259,12 +250,25 @@ function buildStacked() {
     var alzheimers = [];
     var clrd = [];
     var cancer = [];
+    var diabetes = [];
+    var heart = [];
+    var flu = [];
+    var kidney = [];
+    var stroke = [];
+    var suicide = [];
     var year = [];
     response.forEach(d => {
       accident.push(d["AccidentPercent"]);
       alzheimers.push(d["AlzheimersPercent"]);
       clrd.push(d["CLRDPercent"]);
       cancer.push(d["CancerPercent"]);
+      diabetes.push(d["DiabetesPercent"]);
+      heart.push(d["HeartPercent"]);
+      flu.push(d["InfluenzaPercent"]);
+      kidney.push(d["KidneyPercent"]);
+      stroke.push(d["StrokePercent"]);
+      suicide.push(d["SuicidePercent"]);
+
       year.push(d["Year"]); 
     })
     function initStacked() {
@@ -281,7 +285,13 @@ function buildStacked() {
           {name: 'Accident', data: accident}, 
           {name: 'Alzheimers', data: alzheimers}, 
           {name: 'CLRD', data: clrd}, 
-          {name: 'Cancer', cancer}]
+          {name: 'Cancer', data: cancer},
+          {name: 'Diabetes', data: diabetes},
+          {name: 'Heart Disease', data: heart},
+          {name: 'Influenza', data: flu},
+          {name: 'Kidney', data: kidney},
+          {name: 'Stroke', data: stroke},
+          {name: 'Suicide', data: suicide}]
       });
     }
     initStacked();
