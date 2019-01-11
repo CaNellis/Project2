@@ -19,7 +19,7 @@ In jupyter notbeook, we limited our dataset to: only the U.S. as a whole (remove
 ## Visualization:
 For our final visualization, we created an interactive dashboard using a Python Flask powered RESTful API,  HTML/CSS, JavaScript, and csv data. 
 
-### Line Chart (created with plotly js) = 
+### Line Chart (created with [plotly](https://plot.ly/javascript/)) = 
 - chosen to allow user to more interactively compare causes of death over time, replaces the need for numerous static charts in Project 
 - features: user can select which of the 10 causes to appear on the line graph and user can view specific values upon hover 
 
