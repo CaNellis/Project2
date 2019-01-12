@@ -21,14 +21,16 @@ In jupyter notbeook, we limited our dataset to: only the U.S. as a whole (remove
 ## Visualization:
 For our final visualization, we created an interactive dashboard using a Python Flask powered RESTful API,  HTML/CSS, JavaScript, and csv data. 
 
-### Line Chart (using plotly) = 
+### Line Chart (using plotly js) = 
 - chosen to allow user to more interactively compare causes of death over time than from static charts in Project 1. 
 - the user can select which of the 10 causes to appear on the line graph. The user can view specific values upon hover 
 
-### Stacked Bar Chart (using highlights js) =
+### Stacked Bar Chart (using [highlights](https://www.highcharts.com/)) =
 - initially we developed a pie and bar chart with plotly that changes uear upon selection. 
 - ultimately, the stacked bar chart was chosen to replace the two as it shows comparison and percent composition for each year
 
-### Choropleth Map (using plotly) = (not complete)
+### Choropleth Map (using plotly js) = not complete
 - chosen to display differences in rates among states. 
 - the user can toggle the year
+
+### Scatter plot (using highcharts js) =  not complete
