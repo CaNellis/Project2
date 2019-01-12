@@ -33,4 +33,4 @@ For our final visualization, we created an interactive dashboard using a Python 
 - chosen to display differences in rates among states. 
 - the user can toggle the year
 
-### Scatter plot (using highcharts js) =  not complete
+### Bubble Chart (using highcharts js) =  not complete
