@@ -25,7 +25,10 @@ For our final visualization, we created an interactive dashboard using a Python 
 - chosen to allow user to more interactively compare causes of death over time than from static charts in Project 1. 
 - the user can select which of the 10 causes to appear on the line graph. The user can view specific values upon hover 
 
-### Stacked Bar Chart (using [highlights](https://www.highcharts.com/)) =
+### Area Chart (using [highcharts](https://www.highcharts.com/))
+- chosen to show overall decrease in death total death rate as well as change in each causes' death rate contribution for each year. 
+
+### Stacked Bar Chart (using [highcharts](https://www.highcharts.com/)) =
 - initially we developed a pie and bar chart with plotly that changes uear upon selection. 
 - ultimately, the stacked bar chart was chosen to replace the two as it shows comparison and percent composition for each year
 

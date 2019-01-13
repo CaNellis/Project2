@@ -19,7 +19,7 @@ function buildLine() {
         alzheimers.push(d["AlzheimersRate"]);
         clrd.push(d["CLRDRate"]);
         cancer.push(d["CancerRate"]);
-        diabetes.push(d["DiabetesRate "]);
+        diabetes.push(d["DiabetesRate"]);
         heart.push(d["HeartRate"]);
         influenza.push(d["InfluenzaFate"]);
         kidney.push(d["KidneyRate"]);
@@ -104,13 +104,68 @@ function buildLine() {
       var layout = {
         title: "Change in Causes' Death Rates Over the Years", 
         xaxis: { title: "Year" },
-        yaxis: { title: "Death Rate (per 100,000 people)" },
+        yaxis: { title: "Age Adjusted Death Rate (per 100,000 people)" },
       };
       // Plot the chart to a div tag with id "plot"
       Plotly.newPlot("line", data, layout);
   });
 }
 buildLine();
+
+// area chart ----using highlights js
+function buildArea() {
+  var url = "http://localhost:5000/areaChart";
+  d3.json(url).then(function(response) {
+    var accident = [];
+    var alzheimers = [];
+    var clrd = [];
+    var cancer = [];
+    var diabetes = [];
+    var heart = [];
+    var influenza = [];
+    var kidney = [];
+    var suicide = [];
+    var stroke = [];
+    var year = [];   
+    response.forEach(d => {
+      accident.push(d["AccidentRate"]);
+      alzheimers.push(d["AlzheimersRate"]);
+      clrd.push(d["CLRDRate"]);
+      cancer.push(d["CancerRate"]);
+      diabetes.push(d["DiabetesRate"]);
+      heart.push(d["HeartRate"]);
+      influenza.push(d["InfluenzaFate"]);
+      kidney.push(d["KidneyRate"]);
+      suicide.push(d["SuicideRate"]);
+      stroke.push(d["StrokeRate"]);
+      year.push(d["Year"]);
+    })
+    function initArea() {
+      Highcharts.chart('areaChart', {
+        chart: {type: 'area'},
+        title: {text: "Change in Total Death Rate Over Time"},
+        xAxis: {categories: year},
+        yAxis: {min: 0, title: {text: 'Age Adjusted Death Rate Rotal'}},
+        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+          shared: true},
+        plotOptions: {area: {stacking: 'normal'}},
+        series: [
+          {name: 'Accident', data: accident}, 
+          {name: 'Alzheimers', data: alzheimers}, 
+          {name: 'CLRD', data: clrd}, 
+          {name: 'Cancer', data: cancer},
+          {name: 'Diabetes', data: diabetes},
+          {name: 'Heart Disease', data: heart},
+          {name: 'Influenza', data: influenza},
+          {name: 'Kidney', data: kidney},
+          {name: 'Stroke', data: stroke},
+          {name: 'Suicide', data: suicide}]
+      });
+    }
+    initArea();
+  }); // end url.then
+} // end buildStacked
+buildArea();
 
 // stacked bar chart ----using highlights js instead of plotly
 function buildStacked() {

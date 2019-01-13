@@ -19,6 +19,7 @@ pieData = pd.read_csv("pieData.csv")
 barData = pd.read_csv("barData.csv")
 USOData = pd.read_csv("lineData.csv")
 stackedBarData = pd.read_csv("stackedBarData.csv")
+areaChart = pd.read_csv("lineData.csv")
 
 # # database setup
 # app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///data.sqlite"
@@ -43,6 +44,11 @@ def line():
     USOdict = USOData.to_dict(orient="record")
     return jsonify(USOdict)
 
+@app.route("/areaChart")
+def area():
+    areaChartDict = areaChart.to_dict(orient="record")
+    return jsonify(areaChartDict)
+    
 @app.route("/stackedBar")
 def stackedBar():
     stackedBarDict = stackedBarData.to_dict(orient="record")
