@@ -143,9 +143,9 @@ function buildArea() {
     function initArea() {
       Highcharts.chart('areaChart', {
         chart: {type: 'area'},
-        title: {text: "Change in Total Death Rate Over Time"},
+        title: {text: "Change in Total Death Rates Over Time"},
         xAxis: {categories: year},
-        yAxis: {min: 0, title: {text: 'Age Adjusted Death Rate Rotal'}},
+        yAxis: {min: 0, title: {text: 'Total Deaths per 100,000 people'}},
         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
           shared: true},
         plotOptions: {area: {stacking: 'normal'}},
