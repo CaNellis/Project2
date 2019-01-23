@@ -8,7 +8,7 @@ Display U.S. Top Ten Leading Causes of Death from 1999-2016 in an effective and 
 <br>Age-Adjusted Death Rates for 10 Leading Causes of Death in United States over 17 years:
 The dataset provides age-adjusted death rates for the 10 leading causes of death in the United States (by state) from the years 1999-2016.
  
-## Variable: 
+## Variables: 
 1. Years: 1999-2016
 2. Causes of Death: Top 10 Causes of death classified by the International Classification of Diseases, Tenth Revision (ICD–10) and ranked according to the number of deaths assigned to rankable causes (based on the underlying cause of death)
 3. State: we’re just using the entire U.S.
