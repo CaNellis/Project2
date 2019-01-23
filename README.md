@@ -1,7 +1,7 @@
 # Project2 Description
  
 ## Topic Selection:
-We decided to use a previous dataset from project 1 and visualize it in a more effective and user-friendly way. 
+Display U.S. Top Ten Leading Causes of Death from 1999-2016 in an effective and user-friendly way. 
  
 ## Dataset:
 [link to dataset](https://data.cdc.gov/NCHS/NCHS-Leading-Causes-of-Death-United-States/bi63-dtpu)
@@ -12,25 +12,24 @@ The dataset provides age-adjusted death rates for the 10 leading causes of death
 1. Years: 1999-2016
 2. Causes of Death: Top 10 Causes of death classified by the International Classification of Diseases, Tenth Revision (ICD–10) and ranked according to the number of deaths assigned to rankable causes (based on the underlying cause of death)
 3. State: we’re just using the entire U.S.
-4. Number of Deaths: based on resident death certificates filed 
-5. Age-Adjusted Death Rate (per 100,000 people)
+4. Age-Adjusted Death Rate (per 100,000 people)
  
 ## Data Cleaning:
-In jupyter notbeook, we limited our dataset to: only the U.S. as a whole (remove state variable) and to follow-up on a subset of the original dataset using some of the analysis completed in Project 1. 
+In jupyter notbeook, we limited our dataset to: only the U.S. as a whole (removed state variable and aggregate causes of death). 
  
 ## Visualization:
 For our final visualization, we created an interactive dashboard using a Python Flask powered RESTful API,  HTML/CSS, JavaScript, and csv data. 
 
 ### Line Chart (using plotly js) = 
-- chosen to allow user to more interactively compare causes of death over time than from static charts in Project 1. 
+- chosen to allow the user to interactively compare causes of death over tim. 
 - the user can select which of the 10 causes to appear on the line graph. The user can view specific values upon hover 
 
 ### Area Chart (using [highcharts](https://www.highcharts.com/))
-- chosen to show overall decrease in death total death rate as well as change in each causes' death rate contribution for each year. 
+- chosen to highlight the overall decrease in total death rate as well as change in each causes' contribution for each year. 
 
 ### Stacked Bar Chart (using [highcharts](https://www.highcharts.com/)) =
-- initially we developed a pie and bar chart with plotly that changes uear upon selection. 
-- ultimately, the stacked bar chart was chosen to replace the two as it shows comparison and percent composition for each year
+- chosen to highlight the change in a cause of death's contribution to the number of total deaths over time.
+- enables user to see how each rate changes over time easier than area chart (example: heart disease gets smaller while accident gets larger)
 
 ### Choropleth Map (using plotly js) = not complete
 - chosen to display differences in rates among states. 
