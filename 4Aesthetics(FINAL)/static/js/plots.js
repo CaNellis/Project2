@@ -31,70 +31,70 @@ function buildLine() {
       var trace1 = {
         x: year,
         y: alzheimers,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Alzheimer's Disease"
       };
       var trace2 = {
         x: year,
         y: clrd,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Chronic Lower Respiratory Disease"
       };
       var trace3 = {
         x: year,
         y: cancer,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Cancer"
       };
       var trace4 = {
         x: year,
         y: diabetes,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Diabetes"
       };
       var trace5 = {
         x: year,
         y: heart,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Heart Disease"
       };
       var trace6 = {
         x: year,
         y: influenza,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Influenza"
       };
       var trace7 = {
         x: year,
         y: kidney,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Kidney"
       };
       var trace8 = {
         x: year,
         y: stroke,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Stroke" 
       };
       var trace9 = {
         x: year,
         y: suicide,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Suicide" 
       };
       var trace10 = {
         x: year,
         y: accident,
-        mode: "markers",
+        mode: "lines+markers",
         type: "scatter",
         name: "Accident"
       };
